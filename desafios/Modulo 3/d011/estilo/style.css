@@ -34,8 +34,8 @@ header > h1 {
 
 header > p {
     color: white;
-    text-align: center;
     font-family: var(--font-padrao);
+    text-align: center;
 }
 header a, footer a{
     font-weight: bold;
@@ -68,11 +68,13 @@ section.diferente {
 section#img01 {
     background-image: url(../imagens/background001.jpg);
     background-attachment: fixed;
+    min-width: 600px;
 }
 
 section#img02 {
     background-image: url(../imagens/background002.jpg);
     background-attachment: fixed;
+    min-width: 600px;
 }
 
 footer {
