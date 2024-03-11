@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*Todas as demais configurações*/
+
+/*Typical Device Breackpoints:
+
+Móvel: 360 x 640
+Móvel: 375 x 667
+Móvel: 360 x 720
+iPhoneX: 375x812
+Pixel 2: 411x731
+Tablet: 768 x 1024
+Computador portátil: 1366 x 768
+Laptop ou desktop de alta resolução: 1920 x 1080
+*/
+
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg);
+        /*Desnecessario pois não da pra imprimir um background*/
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa estilização de impressão foi feita por min';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    #impressora {
+        display: block;
+    }
+
+    #telefone,
+    #tablet,
+    #pc,
+    #televisao {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px)
+/*TABLET*/
+    {
+
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #tablet {
+        display: block;
+    }
+
+    #telefone,
+    #impressora,
+    #pc,
+    #televisao {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1600px)
+/*DESKTOP*/
+    {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    #pc {
+        display: block;
+    }
+
+    #tablet,
+    #impressora,
+    #telefone,
+    #televisao {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #televisao {
+        display: block;
+    }
+
+    #tablet,
+    #impressora,
+    #pc,
+    #telefone {
+        display: none;
+    }
+}
